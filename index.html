@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherif Cafe | Cafe & Roastery Bandung</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Hijau Cafe, cafe dan roastery bernuansa alam di Dago Atas, Bandung. Nikmati kopi artisan lokal dan udara sejuk pegunungan.">
+    <meta name="keywords" content="cafe bandung, kedai kopi dago, tempat nongkrong dago, roastery bandung, cafe estetik bandung">
+    <meta name="author" content="Hijau Cafe">
+    <meta property="og:title" content="Hijau Cafe | Cafe & Roastery Bandung">
+    <meta property="og:description" content="Tempat berteduh dan menikmati kopi artisan di ketinggian Dago Atas, Bandung.">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        pine: {
+                            50: '#f2f9f6',
+                            100: '#e1f2e9',
+                            800: '#1e4c3c',
+                            900: '#183f32',
+                        },
+                        wood: '#8b5a2b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-pine-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="coffee" class="h-6 w-6 text-pine-800"></i>
+                    <span class="font-serif text-2xl font-semibold text-pine-900">Hijau Cafe</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-pine-800 font-medium transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-600 hover:text-pine-800 font-medium transition-colors">Cerita Kami</a>
+                    <a href="#menu" class="text-gray-600 hover:text-pine-800 font-medium transition-colors">Menu</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-pine-800 font-medium transition-colors">Galeri</a>
+                    <a href="#location" class="text-gray-600 hover:text-pine-800 font-medium transition-colors">Lokasi</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#location" class="bg-pine-800 hover:bg-pine-900 text-white px-5 py-2 rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
+                        Reservasi
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-pine-800 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden pb-6 pt-2">
+                <div class="flex flex-col space-y-4 text-center">
+                    <a href="#home" class="text-gray-600 hover:text-pine-800 font-medium">Beranda</a>
+                    <a href="#about" class="text-gray-600 hover:text-pine-800 font-medium">Cerita Kami</a>
+                    <a href="#menu" class="text-gray-600 hover:text-pine-800 font-medium">Menu</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-pine-800 font-medium">Galeri</a>
+                    <a href="#location" class="text-gray-600 hover:text-pine-800 font-medium">Lokasi</a>
+                    <a href="#location" class="bg-pine-800 text-white px-5 py-2 rounded-full font-medium inline-block mx-auto w-3/4">Reservasi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000" alt="Cafe Background" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-pine-900/60 to-pine-900/80"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <span class="text-pine-50 uppercase tracking-[0.2em] text-sm font-semibold mb-4 block">Dago Atas, Bandung</span>
+            <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">
+                Sesap Kopi di Bawah <br/> <span class="italic text-pine-100">Rimbunnya Pinus</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                Menepi sejenak dari hiruk pikuk kota. Nikmati sajian kopi artisan dan udara sejuk Bandung di setiap cangkirnya.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-white text-pine-900 px-8 py-3 rounded-full font-semibold hover:bg-pine-50 transition-colors shadow-lg">Lihat Menu</a>
+                <a href="#location" class="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">Arahkan Lokasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Coffee Pour" class="rounded-2xl shadow-2xl z-10 relative" />
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-pine-800 rounded-2xl z-0 hidden md:block"></div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-serif text-pine-900 mb-6">Ruang Teduh di Ketinggian Bandung</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Berdiri sejak 2024, Hijau Cafe lahir dari kerinduan akan ruang yang menenangkan. Kami memadukan biji kopi Nusantara terbaik yang dipanggang sendiri dengan arsitektur yang melebur bersama alam Dago.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Di sini, setiap sudut didesain agar Anda bisa bernapas lebih lega, entah itu untuk bekerja, bercengkrama, atau sekadar menikmati kabut sore yang turun perlahan.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-2xl font-serif text-pine-800 mb-2">100%</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">Biji Kopi Lokal</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-serif text-pine-800 mb-2">1000m</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">Di Atas Permukaan Laut</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-pine-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-pine-800 font-semibold tracking-wider text-sm uppercase mb-2 block">Daftar Menu</span>
+                <h2 class="text-4xl font-serif text-pine-900">Kurasi Rasa Hijau Cafe</h2>
+            </div>
+            
+            <!-- Kategori: Minuman -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif text-pine-900 mb-8 border-b-2 border-pine-200 pb-2 inline-block">Minuman (Kopi & Non-Kopi)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=500" alt="Kopi Susu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 35.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Kopi Susu Kabut</h4>
+                            <p class="text-gray-600 text-sm">Signature es kopi susu dengan gula aren organik khas Ciwidey.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1536514072410-5019a3c69182?auto=format&fit=crop&q=80&w=500" alt="Matcha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 38.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Matcha Pinus</h4>
+                            <p class="text-gray-600 text-sm">Premium uji matcha dipadu susu oat dan sedikit hint pandan.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=500" alt="Mocktail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 40.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Sunset di Dago</h4>
+                            <p class="text-gray-600 text-sm">Mocktail segar cold brew earl grey, sirup peach, dan perasan lemon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori: Makanan Utama -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif text-pine-900 mb-8 border-b-2 border-pine-200 pb-2 inline-block">Makanan Utama</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=500" alt="Nasi Goreng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 45.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Nasi Goreng Kecombrang</h4>
+                            <p class="text-gray-600 text-sm">Wangi kecombrang khas, disajikan dengan sate lilit dan sambal matah.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=500" alt="Pasta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 48.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Spaghetti Aglio Olio</h4>
+                            <p class="text-gray-600 text-sm">Classic aglio olio dengan irisan smoked beef, jamur, dan garlic bread.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&q=80&w=500" alt="Rice Bowl" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 42.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Chicken Nanban Bowl</h4>
+                            <p class="text-gray-600 text-sm">Ayam goreng juicy saus tartar rumahan di atas nasi hangat pulen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori: Cemilan & Dessert -->
+            <div>
+                <h3 class="text-2xl font-serif text-pine-900 mb-8 border-b-2 border-pine-200 pb-2 inline-block">Cemilan & Dessert</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=500" alt="Croissant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 32.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Butter Croissant</h4>
+                            <p class="text-gray-600 text-sm">Renyah di luar, lembut dan wangi butter di dalam. Fresh baked.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1623653387945-2fd25214f8fc?auto=format&fit=crop&q=80&w=500" alt="Singkong" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 28.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Singkong Truffle</h4>
+                            <p class="text-gray-600 text-sm">Singkong goreng renyah disiram truffle oil dan taburan keju parmesan.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&q=80&w=500" alt="Tiramisu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-semibold text-pine-900 shadow">Rp 38.000</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-serif text-pine-900 mb-2">Classic Tiramisu</h4>
+                            <p class="text-gray-600 text-sm">Layer ladyfingers celup espresso, mascarpone cheese, dan cocoa powder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-pine-800 font-semibold tracking-wider text-sm uppercase mb-2 block">Galeri</span>
+                <h2 class="text-4xl font-serif text-pine-900">Sudut Estetik Hijau Cafe</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Tiap sudut dirancang untuk meresapi tenang dan cantiknya alam Dago. Jangan lupa tag kami di foto terbaikmu.</p>
+            </div>
+            
+            <!-- Bento Grid Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+                <!-- Large Square -->
+                <div class="md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Interior Cafe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <!-- Small Rectangles -->
+                <div class="rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=500" alt="Kopi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=500" alt="Spot Outdoor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <!-- Wide Rectangle -->
+                <div class="md:col-span-2 rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=800" alt="Suasana Sore" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-24 bg-pine-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-pine-800 font-semibold tracking-wider text-sm uppercase mb-2 block">Koneksi</span>
+            <h2 class="text-4xl font-serif text-pine-900 mb-12">Ikuti Jejak Kabut</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Instagram -->
+                <a href="#" class="group relative rounded-2xl overflow-hidden shadow-lg aspect-video flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=800" alt="Instagram Hijau Cafe" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-pine-900/40 group-hover:bg-pine-900/60 transition-colors"></div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-white mb-3 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                        <span class="text-white font-medium text-lg tracking-wider">@kabutdago.id</span>
+                        <span class="text-pine-100 text-sm mt-1">Lihat Galeri Estetik Kami</span>
+                    </div>
+                </a>
+                
+                <!-- TikTok -->
+                <a href="#" class="group relative rounded-2xl overflow-hidden shadow-lg aspect-video flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="TikTok Hijau Cafe" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-pine-900/40 group-hover:bg-pine-900/60 transition-colors"></div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-white mb-3 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                        </svg>
+                        <span class="text-white font-medium text-lg tracking-wider">@kabutdago</span>
+                        <span class="text-pine-100 text-sm mt-1">Tonton Vibe Asli Disini</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="location" class="bg-pine-900 text-pine-100 py-16 border-t border-pine-800 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <i data-lucide="coffee" class="h-6 w-6 text-white"></i>
+                        <span class="font-serif text-2xl font-semibold text-white">Hijau Cafe</span>
+                    </div>
+                    <p class="text-pine-100/80 mb-6 text-sm leading-relaxed">
+                        Menyajikan kopi dengan hati, merawat alam dengan aksi. Tempat berteduhmu di utara Bandung.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-pine-100 hover:text-white transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-pine-100 hover:text-white transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jam Operasional -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Jam Operasional</h4>
+                    <ul class="space-y-3 text-sm text-pine-100/80">
+                        <li class="flex justify-between">
+                            <span>Senin - Kamis</span>
+                            <span>08:00 - 22:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Jumat</span>
+                            <span>08:00 - 23:00</span>
+                        </li>
+                        <li class="flex justify-between text-white font-medium">
+                            <span>Sabtu - Minggu</span>
+                            <span>07:00 - 23:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Lokasi -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Lokasi</h4>
+                    <p class="text-sm text-pine-100/80 mb-4 leading-relaxed">
+                        Jl. Rimbun Pinus No. 99, Dago Atas,<br>
+                        Kecamatan Coblong, Kota Bandung,<br>
+                        Jawa Barat 40135
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-white text-sm font-medium hover:text-pine-200 transition-colors group">
+                        <svg class="w-5 h-5 text-red-500 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+                        </svg>
+                        Buka di Google Maps
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-pine-800 mt-12 pt-8 text-center text-sm text-pine-100/50">
+                &copy; 2024 Hijau Cafe Cafe. Dummy Project Design.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Tutup menu mobile otomatis saat link diklik
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
